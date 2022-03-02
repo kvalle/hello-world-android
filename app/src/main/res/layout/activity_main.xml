@@ -13,7 +13,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="128dp"
         android:layout_marginEnd="24dp"
-        android:alpha="0.1"
+        android:alpha="0.2"
         android:importantForAccessibility="no"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -73,8 +73,29 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:text="@string/hello_button_text"
-        android:tooltipText="Say hello!"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kittenButton" />
+
+    <Button
+        android:id="@+id/kittenButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/cat_button_text"
+        android:tooltipText="Sey hello with cat!"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whoToGreetTextField" />
+
+    <Button
+        android:id="@+id/octopusButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/octopus_button_text"
+        android:tooltipText="Sey hello with octopus!"
+        app:layout_constraintStart_toEndOf="@+id/kittenButton"
         app:layout_constraintTop_toBottomOf="@+id/whoToGreetTextField" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

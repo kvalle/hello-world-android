@@ -2,5 +2,7 @@
     <string name="app_name">Hello World App</string>
     <string name="hello">Hello,</string>
     <string name="world">World</string>
-    <string name="hello_button_text">👋</string>
+    <string name="hello_button_text">👋 Say hello!</string>
+    <string name="octopus_button_text">🐙</string>
+    <string name="cat_button_text">😸</string>
 </resources>

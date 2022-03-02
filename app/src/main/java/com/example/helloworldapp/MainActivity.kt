@@ -15,19 +15,31 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val helloButton: Button = findViewById(R.id.helloButton)
+        val octoButton : Button = findViewById(R.id.octopusButton)
+        val kittenButton : Button = findViewById(R.id.kittenButton)
         val nameField : EditText = findViewById(R.id.whoToGreetTextField);
-        val kittyImage : ImageView = findViewById(R.id.kittyImage)
+        val image : ImageView = findViewById(R.id.kittyImage)
+
+        octoButton.setOnClickListener {
+            image.setImageResource(R.drawable.octopus_cartoon_clipart_784330)
+            image.alpha = 0.5f
+        }
+
+        kittenButton.setOnClickListener {
+            image.setImageResource(R.drawable.hello)
+            image.alpha = 0.2f
+        }
 
         helloButton.setOnClickListener {
             val outputTextView: TextView = findViewById(R.id.helloOutputText);
             outputTextView.text = "Hello, ${nameField.text}!"
 
-            kittyImage.pivotX = kittyImage.width.toFloat() / 2
-            kittyImage.pivotY = kittyImage.height.toFloat() / 2
-            kittyImage.animate().rotation(15f).setDuration(300).withEndAction {
-                kittyImage.animate().rotation(0f).setDuration(300).withEndAction {
-                    kittyImage.animate().rotation(15f).setDuration(300).withEndAction {
-                        kittyImage.animate().rotation(0f)
+            image.pivotX = image.width.toFloat() / 2
+            image.pivotY = image.height.toFloat() / 2
+            image.animate().rotation(15f).setDuration(300).withEndAction {
+                image.animate().rotation(0f).setDuration(300).withEndAction {
+                    image.animate().rotation(15f).setDuration(300).withEndAction {
+                        image.animate().rotation(0f)
                     }
                 }
             }

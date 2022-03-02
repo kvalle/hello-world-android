@@ -41,17 +41,17 @@
 
     <EditText
         android:id="@+id/whoToGreetTextField"
-        android:ems="10"
         android:layout_width="245dp"
         android:layout_height="56dp"
         android:layout_marginStart="24dp"
+        android:autofillHints="name"
+        android:ems="10"
         android:fontFamily="sans-serif-light"
+        android:imeOptions="actionDone"
+        android:inputType="textPersonName"
+        android:maxLength="34"
         android:text="@string/world"
         android:textColor="#121212"
-        android:inputType="textPersonName"
-        android:autofillHints="name"
-        android:imeOptions="actionDone"
-        android:maxLength="34"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/helloText"
         tools:ignore="LabelFor" />

@@ -16,18 +16,24 @@ class MainActivity : AppCompatActivity() {
 
         val helloButton: Button = findViewById(R.id.helloButton)
         val octoButton : Button = findViewById(R.id.octopusButton)
+        val elephantButton : Button = findViewById(R.id.elephantButton)
         val kittenButton : Button = findViewById(R.id.kittenButton)
         val nameField : EditText = findViewById(R.id.whoToGreetTextField);
         val image : ImageView = findViewById(R.id.kittyImage)
 
         octoButton.setOnClickListener {
-            image.setImageResource(R.drawable.octopus_cartoon_clipart_784330)
-            image.alpha = 0.5f
+            image.setImageResource(R.drawable.octopus)
+            image.alpha = 0.6f
         }
 
         kittenButton.setOnClickListener {
-            image.setImageResource(R.drawable.hello)
-            image.alpha = 0.2f
+            image.setImageResource(R.drawable.kitty)
+            image.alpha = 0.4f
+        }
+
+        elephantButton.setOnClickListener {
+            image.setImageResource(R.drawable.elephant)
+            image.alpha = 0.8f
         }
 
         helloButton.setOnClickListener {

@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:paddingHorizontal="24dp"
+    android:paddingTop="32dp">
 
     <ImageView
         android:id="@+id/kittyImage"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="128dp"
-        android:layout_marginEnd="24dp"
         android:alpha="0.4"
         android:importantForAccessibility="no"
         android:scaleType="fitCenter"
@@ -28,8 +28,6 @@
         android:id="@+id/helloText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="32dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/hello"
         android:textColor="@android:color/black"
@@ -43,7 +41,6 @@
         android:id="@+id/whoToGreetTextField"
         android:layout_width="245dp"
         android:layout_height="56dp"
-        android:layout_marginStart="24dp"
         android:autofillHints="name"
         android:ems="10"
         android:fontFamily="sans-serif-light"
@@ -53,21 +50,19 @@
         android:text="@string/world"
         android:textColor="#121212"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/helloText"
+        app:layout_constraintTop_toBottomOf="@id/helloText"
         tools:ignore="LabelFor" />
 
     <TextView
         android:id="@+id/helloOutputText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
         android:layout_marginBottom="32dp"
         android:fontFamily="sans-serif-condensed"
         android:textAlignment="center"
         android:textSize="34sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/kittyImage"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:text="Hello, Kjetil!" />
@@ -76,21 +71,20 @@
         android:id="@+id/helloButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         android:text="@string/hello_button_text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/kittenButton" />
+        app:layout_constraintTop_toBottomOf="@id/kittenButton" />
 
     <Button
         android:id="@+id/kittenButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="12dp"
         android:text="@string/cat_button_text"
         android:tooltipText="Sey hello with cat!"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/whoToGreetTextField" />
+        app:layout_constraintTop_toBottomOf="@id/whoToGreetTextField"
+        tools:targetApi="o" />
 
     <Button
         android:id="@+id/octopusButton"
@@ -100,8 +94,9 @@
         android:layout_marginTop="12dp"
         android:text="@string/octopus_button_text"
         android:tooltipText="Sey hello with octopus!"
-        app:layout_constraintStart_toEndOf="@+id/kittenButton"
-        app:layout_constraintTop_toBottomOf="@+id/whoToGreetTextField" />
+        app:layout_constraintStart_toEndOf="@id/kittenButton"
+        app:layout_constraintTop_toBottomOf="@id/whoToGreetTextField"
+        tools:targetApi="o" />
 
     <Button
         android:id="@+id/elephantButton"
@@ -111,7 +106,8 @@
         android:layout_marginTop="12dp"
         android:text="@string/elephant_button_text"
         android:tooltipText="Sey hello with octopus!"
-        app:layout_constraintStart_toEndOf="@+id/octopusButton"
-        app:layout_constraintTop_toBottomOf="@+id/whoToGreetTextField" />
+        app:layout_constraintStart_toEndOf="@id/octopusButton"
+        app:layout_constraintTop_toBottomOf="@id/whoToGreetTextField"
+        tools:targetApi="o" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

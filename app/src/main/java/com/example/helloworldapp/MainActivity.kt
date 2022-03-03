@@ -3,6 +3,7 @@ package com.example.helloworldapp
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.widget.addTextChangedListener
 import com.example.helloworldapp.databinding.ActivityMainBinding
 
 private const val TAG = "MainActivity"
@@ -33,6 +34,13 @@ class MainActivity : AppCompatActivity() {
                     binding.kittyImage.alpha = 0.8f
                     Log.v(TAG, "Elephant was chosen.")
                 }
+            }
+        }
+
+        binding.whoToGreetTextField.addTextChangedListener {
+            when (it?.isEmpty()) {
+                true -> binding.helloButton.isEnabled = false
+                false -> binding.helloButton.isEnabled = true
             }
         }
 

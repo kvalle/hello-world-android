@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:paddingHorizontal="24dp"
-    android:paddingTop="32dp">
+    android:paddingTop="32dp"
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/kittyImage"
@@ -67,47 +67,57 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:text="Hello, Kjetil!" />
 
+    <RadioGroup
+        android:id="@+id/animals_radio_button_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/animals_radio_button_option_kitten"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/whoToGreetTextField">
+
+        <RadioButton
+            android:id="@+id/animals_radio_button_option_kitten"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kitten_button_text"
+            android:textSize="32sp"
+            tools:ignore="TextContrastCheck" />
+
+        <RadioButton
+            android:id="@+id/animals_radio_button_option_octopus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/octopus_button_text"
+            android:textSize="32sp"
+            tools:ignore="TextContrastCheck" />
+
+        <RadioButton
+            android:id="@+id/animals_radio_button_option_elephant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/elephant_button_text"
+            android:textSize="32sp"
+            tools:ignore="TextContrastCheck" />
+    </RadioGroup>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/wave_switch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="@string/wave_question"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/animals_radio_button_group"
+        tools:ignore="TextContrastCheck" />
+
     <Button
         android:id="@+id/helloButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hello_button_text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/kittenButton" />
+        app:layout_constraintTop_toBottomOf="@id/wave_switch" />
 
-    <Button
-        android:id="@+id/kittenButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@string/cat_button_text"
-        android:tooltipText="Sey hello with cat!"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/whoToGreetTextField"
-        tools:targetApi="o" />
-
-    <Button
-        android:id="@+id/octopusButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:text="@string/octopus_button_text"
-        android:tooltipText="Sey hello with octopus!"
-        app:layout_constraintStart_toEndOf="@id/kittenButton"
-        app:layout_constraintTop_toBottomOf="@id/whoToGreetTextField"
-        tools:targetApi="o" />
-
-    <Button
-        android:id="@+id/elephantButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:text="@string/elephant_button_text"
-        android:tooltipText="Sey hello with octopus!"
-        app:layout_constraintStart_toEndOf="@id/octopusButton"
-        app:layout_constraintTop_toBottomOf="@id/whoToGreetTextField"
-        tools:targetApi="o" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

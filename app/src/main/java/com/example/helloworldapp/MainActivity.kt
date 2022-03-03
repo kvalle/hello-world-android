@@ -1,12 +1,14 @@
 package com.example.helloworldapp
 
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
+private const val TAG = "MainActivity"
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,16 +26,19 @@ class MainActivity : AppCompatActivity() {
         octoButton.setOnClickListener {
             image.setImageResource(R.drawable.octopus)
             image.alpha = 0.6f
+            Log.v(TAG, "Octopus was chosen.")
         }
 
         kittenButton.setOnClickListener {
             image.setImageResource(R.drawable.kitty)
             image.alpha = 0.4f
+            Log.v(TAG, "Kitty was chosen.")
         }
 
         elephantButton.setOnClickListener {
             image.setImageResource(R.drawable.elephant)
             image.alpha = 0.8f
+            Log.v(TAG, "Elephant was chosen.")
         }
 
         helloButton.setOnClickListener {

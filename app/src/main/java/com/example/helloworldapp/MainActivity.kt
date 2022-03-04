@@ -53,7 +53,11 @@ class MainActivity : AppCompatActivity() {
         binding.helloButton.setOnClickListener {
 
             Snackbar
-                .make(binding.root, "Hello, ${binding.whoToGreetField.text}!", Snackbar.LENGTH_SHORT)
+                .make(
+                    binding.root,
+                    "Hello, ${binding.whoToGreetField.text}!",
+                    Snackbar.LENGTH_SHORT
+                )
                 .show()
 
             if (binding.waveSwitch.isChecked) {
@@ -70,5 +74,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
 
 }

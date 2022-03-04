@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
 import com.example.helloworldapp.databinding.ActivityMainBinding
+import com.google.android.material.snackbar.Snackbar
 
 private const val TAG = "MainActivity"
 
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
             when (option) {
                 R.id.animals_radio_button_option_hand -> {
                     binding.kittyImage.setImageResource(R.drawable.waving_hand)
-                    binding.kittyImage.alpha = 0.8f
+                    binding.kittyImage.alpha = 0.6f
                     Log.v(TAG, "Hand was chosen.")
                 }
                 R.id.animals_radio_button_option_kitten -> {
@@ -50,7 +51,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.helloButton.setOnClickListener {
-            binding.helloOutputText.text = "Hello, ${binding.whoToGreetTextField.text}!"
+
+            Snackbar
+                .make(binding.root, "Hello, ${binding.whoToGreetTextField.text}!", Snackbar.LENGTH_SHORT)
+                .show()
 
             if (binding.waveSwitch.isChecked) {
                 val image = binding.kittyImage

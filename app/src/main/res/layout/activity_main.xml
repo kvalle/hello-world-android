@@ -10,19 +10,18 @@
 
     <ImageView
         android:id="@+id/kittyImage"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="128dp"
-        android:alpha="0.4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.6"
         android:importantForAccessibility="no"
-        android:scaleType="fitCenter"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/helloButton"
         app:srcCompat="@drawable/waving_hand"
         tools:ignore="ImageContrastCheck" />
-
 
     <TextView
         android:id="@+id/helloText"
@@ -50,20 +49,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/helloText"
         tools:ignore="LabelFor" />
-
-    <TextView
-        android:id="@+id/helloOutputText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:fontFamily="sans-serif-condensed"
-        android:textAlignment="center"
-        android:textSize="34sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="Hello, Kjetil!" />
 
     <RadioGroup
         android:id="@+id/animals_radio_button_group"

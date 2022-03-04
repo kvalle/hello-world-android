@@ -8,4 +8,5 @@
     <string name="kitten_button_text">😸</string>
     <string name="elephant_button_text">🐘</string>
     <string name="wave_question">Wave?</string>
+    <string name="who_to_greet_field_label">Who to greet?</string>
 </resources>

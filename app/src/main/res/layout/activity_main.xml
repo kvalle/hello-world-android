@@ -35,20 +35,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/whoToGreetTextField"
-        android:layout_width="245dp"
-        android:layout_height="56dp"
-        android:autofillHints="name"
-        android:ems="10"
-        android:fontFamily="sans-serif"
-        android:imeOptions="actionDone"
-        android:inputType="textPersonName"
-        android:maxLength="34"
-        android:hint="@string/world"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/whoToGreetLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/who_to_greet_field_label"
+        app:endIconMode="clear_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/helloText"
-        tools:ignore="LabelFor" />
+        app:counterMaxLength="50"
+        app:counterEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/whoToGreetField"
+            android:imeOptions="actionDone"
+            android:inputType="textPersonName"
+            android:autofillHints="name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <RadioGroup
         android:id="@+id/animals_radio_button_group"
@@ -57,7 +65,7 @@
         android:checkedButton="@id/animals_radio_button_option_hand"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/whoToGreetTextField">
+        app:layout_constraintTop_toBottomOf="@id/whoToGreetLayout">
 
         <RadioButton
             android:id="@+id/animals_radio_button_option_hand"
@@ -92,7 +100,7 @@
             tools:ignore="TextContrastCheck" />
     </RadioGroup>
 
-    <androidx.appcompat.widget.SwitchCompat
+    <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/wave_switch"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

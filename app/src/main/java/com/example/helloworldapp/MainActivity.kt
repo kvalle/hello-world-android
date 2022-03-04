@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        binding.whoToGreetTextField.addTextChangedListener {
+        binding.whoToGreetField.addTextChangedListener {
             when (it?.isEmpty()) {
                 true -> binding.helloButton.isEnabled = false
                 false -> binding.helloButton.isEnabled = true
@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity() {
         binding.helloButton.setOnClickListener {
 
             Snackbar
-                .make(binding.root, "Hello, ${binding.whoToGreetTextField.text}!", Snackbar.LENGTH_SHORT)
+                .make(binding.root, "Hello, ${binding.whoToGreetField.text}!", Snackbar.LENGTH_SHORT)
                 .show()
 
             if (binding.waveSwitch.isChecked) {

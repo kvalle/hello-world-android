@@ -1,118 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingHorizontal="24dp"
-    android:paddingTop="32dp"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/kittyImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:alpha="0.6"
-        android:importantForAccessibility="no"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/helloButton"
-        app:srcCompat="@drawable/waving_hand"
-        tools:ignore="ImageContrastCheck" />
 
-    <TextView
-        android:id="@+id/helloText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/whoToGreetLayout"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/who_to_greet_field_label"
-        app:counterEnabled="true"
-        app:counterMaxLength="50"
-        app:endIconMode="clear_text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/helloText">
+        android:layout_height="match_parent"
+        android:paddingHorizontal="16dp"
+        tools:context=".MainActivity">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/whoToGreetField"
+        <ImageView
+            android:id="@+id/kittyImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:alpha="0.6"
+            android:importantForAccessibility="no"
+            android:scaleType="centerInside"
+            android:paddingTop="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/helloButton"
+            app:srcCompat="@drawable/waving_hand"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/helloText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hello"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/whoToGreetLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints="name"
-            android:imeOptions="actionDone"
-            android:inputType="textPersonName" />
+            android:hint="@string/who_to_greet_field_label"
+            app:counterEnabled="true"
+            app:counterMaxLength="50"
+            app:endIconMode="clear_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/helloText">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/whoToGreetField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="name"
+                android:imeOptions="actionDone"
+                android:inputType="textPersonName" />
 
-    <RadioGroup
-        android:id="@+id/animals_radio_button_group"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:checkedButton="@id/animals_radio_button_option_hand"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/whoToGreetLayout">
+        </com.google.android.material.textfield.TextInputLayout>
 
-        <RadioButton
-            android:id="@+id/animals_radio_button_option_hand"
-            android:layout_width="wrap_content"
+        <RadioGroup
+            android:id="@+id/animals_radio_button_group"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/hand_button_text"
-            android:textSize="32sp"
+            android:checkedButton="@id/animals_radio_button_option_hand"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/whoToGreetLayout">
+
+            <RadioButton
+                android:id="@+id/animals_radio_button_option_hand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hand_button_text"
+                android:textSize="32sp"
+                tools:ignore="TextContrastCheck" />
+
+            <RadioButton
+                android:id="@+id/animals_radio_button_option_kitten"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kitten_button_text"
+                android:textSize="32sp"
+                tools:ignore="TextContrastCheck" />
+
+            <RadioButton
+                android:id="@+id/animals_radio_button_option_octopus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/octopus_button_text"
+                android:textSize="32sp"
+                tools:ignore="TextContrastCheck" />
+
+            <RadioButton
+                android:id="@+id/animals_radio_button_option_elephant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/elephant_button_text"
+                android:textSize="32sp"
+                tools:ignore="TextContrastCheck" />
+        </RadioGroup>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/wave_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/wave_question"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/animals_radio_button_group"
             tools:ignore="TextContrastCheck" />
 
-        <RadioButton
-            android:id="@+id/animals_radio_button_option_kitten"
-            android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/helloButton"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/kitten_button_text"
-            android:textSize="32sp"
-            tools:ignore="TextContrastCheck" />
-
-        <RadioButton
-            android:id="@+id/animals_radio_button_option_octopus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/octopus_button_text"
-            android:textSize="32sp"
-            tools:ignore="TextContrastCheck" />
-
-        <RadioButton
-            android:id="@+id/animals_radio_button_option_elephant"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/elephant_button_text"
-            android:textSize="32sp"
-            tools:ignore="TextContrastCheck" />
-    </RadioGroup>
-
-    <com.google.android.material.switchmaterial.SwitchMaterial
-        android:id="@+id/wave_switch"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:checked="true"
-        android:text="@string/wave_question"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/animals_radio_button_group"
-        tools:ignore="TextContrastCheck" />
-
-    <Button
-        android:id="@+id/helloButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:enabled="false"
-        android:text="@string/hello_button_text"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/wave_switch" />
+            android:enabled="false"
+            android:text="@string/hello_button_text"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/wave_switch" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

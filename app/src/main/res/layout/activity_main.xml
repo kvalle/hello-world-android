@@ -20,7 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/kitty"
+        app:srcCompat="@drawable/waving_hand"
         tools:ignore="ImageContrastCheck" />
 
 
@@ -69,10 +69,18 @@
         android:id="@+id/animals_radio_button_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:checkedButton="@id/animals_radio_button_option_kitten"
+        android:checkedButton="@id/animals_radio_button_option_hand"
         android:orientation="horizontal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/whoToGreetTextField">
+
+        <RadioButton
+            android:id="@+id/animals_radio_button_option_hand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hand_button_text"
+            android:textSize="32sp"
+            tools:ignore="TextContrastCheck" />
 
         <RadioButton
             android:id="@+id/animals_radio_button_option_kitten"

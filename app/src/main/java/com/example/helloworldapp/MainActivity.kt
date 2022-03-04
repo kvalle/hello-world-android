@@ -19,6 +19,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.animalsRadioButtonGroup.setOnCheckedChangeListener { _, option ->
             when (option) {
+                R.id.animals_radio_button_option_hand -> {
+                    binding.kittyImage.setImageResource(R.drawable.waving_hand)
+                    binding.kittyImage.alpha = 0.8f
+                    Log.v(TAG, "Hand was chosen.")
+                }
                 R.id.animals_radio_button_option_kitten -> {
                     binding.kittyImage.setImageResource(R.drawable.kitty)
                     binding.kittyImage.alpha = 0.4f

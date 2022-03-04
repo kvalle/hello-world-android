@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="granite">#ef9a9a</color>
+    <color name="granite_light">#ffcccb</color>
+    <color name="granite_dark">#ba6b6c</color>
+    <color name="laurel">#c5e1a5</color>
+    <color name="laurel_light">#f8ffd7</color>
+    <color name="laurel_dark">#94af76</color>
 </resources>

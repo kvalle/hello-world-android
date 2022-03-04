@@ -12,10 +12,10 @@
         android:id="@+id/kittyImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
         android:alpha="0.6"
         android:importantForAccessibility="no"
         android:scaleType="centerInside"
-        android:adjustViewBounds="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,42 +25,39 @@
 
     <TextView
         android:id="@+id/helloText"
+        style="@style/Widget.HelloWorld.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
         android:text="@string/hello"
-        android:textSize="20sp"
-        android:textStyle="italic"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/whoToGreetLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/who_to_greet_field_label"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
         app:endIconMode="clear_text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/helloText"
-        app:counterMaxLength="50"
-        app:counterEnabled="true"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        >
+        app:layout_constraintTop_toBottomOf="@id/helloText">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/whoToGreetField"
-            android:imeOptions="actionDone"
-            android:inputType="textPersonName"
-            android:autofillHints="name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:autofillHints="name"
+            android:imeOptions="actionDone"
+            android:inputType="textPersonName" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <RadioGroup
         android:id="@+id/animals_radio_button_group"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:checkedButton="@id/animals_radio_button_option_hand"
         android:orientation="horizontal"
@@ -102,7 +99,8 @@
 
     <com.google.android.material.switchmaterial.SwitchMaterial
         android:id="@+id/wave_switch"
-        android:layout_width="0dp"
+        style="@style/Widget.HelloWorld.CompoundButton.Switch"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:checked="true"
         android:text="@string/wave_question"
@@ -112,10 +110,10 @@
 
     <Button
         android:id="@+id/helloButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_button_text"
         android:enabled="false"
+        android:text="@string/hello_button_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/wave_switch" />
 

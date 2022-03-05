@@ -1,12 +1,17 @@
 <resources>
+    <!-- Displayed texts -->
     <string name="app_name">Hello!</string>
-    <string name="hello">Hello,</string>
-    <string name="world">World</string>
+    <string name="hello_comma">Hello,</string>
+
+    <!-- Form texts -->
     <string name="hello_button_text">Say hello!</string>
-    <string name="octopus_button_text">🐙</string>
-    <string name="hand_button_text">👋</string>
-    <string name="kitten_button_text">😸</string>
-    <string name="elephant_button_text">🐘</string>
-    <string name="wave_question">Wave?</string>
-    <string name="who_to_greet_field_label">Who to greet?</string>
+    <string name="octopus_radio_button_text">🐙</string>
+    <string name="hand_radio_button_text">👋</string>
+    <string name="kitten_radio_button_text">😸</string>
+    <string name="elephant_radio_button_text">🐘</string>
+    <string name="wave_switch_text">Wave?</string>
+    <string name="who_to_greet_field_hint">Who to greet?</string>
+
+    <!-- Snackbar greeting -->
+    <string name="snackbar_greeting">Hello, %s!</string>
 </resources>

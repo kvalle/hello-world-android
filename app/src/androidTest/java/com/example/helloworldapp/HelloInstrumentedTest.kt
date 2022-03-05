@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable
 import android.graphics.drawable.StateListDrawable
 import android.view.View
 import android.widget.ImageView
+import androidx.test.core.app.ApplicationProvider
 import androidx.test.espresso.Espresso.closeSoftKeyboard
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
@@ -34,6 +35,8 @@ class HelloInstrumentedTest {
     @get:Rule()
     val activity = ActivityScenarioRule(MainActivity::class.java)
 
+    val resources = ApplicationProvider.getApplicationContext<Context>().resources
+
     @Test
     fun elephant_greets_her_brother() {
 
@@ -58,7 +61,7 @@ class HelloInstrumentedTest {
 
         // The snackbar should contain the correct message
         onView(withId(com.google.android.material.R.id.snackbar_text))
-            .check(matches(withText("Hello, brother!")))
+            .check(matches(withText(resources.getString(R.string.snackbar_greeting, "brother"))))
     }
 
 

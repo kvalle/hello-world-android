@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
             Snackbar
                 .make(
                     binding.root,
-                    "Hello, ${binding.whoToGreetField.text}!",
+                    resources.getString(R.string.snackbar_greeting, binding.whoToGreetField.text),
                     Snackbar.LENGTH_SHORT
                 )
                 .show()

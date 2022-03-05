@@ -33,7 +33,7 @@
             android:id="@+id/helloText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/hello"
+            android:text="@string/hello_comma"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -42,7 +42,7 @@
             android:id="@+id/whoToGreetLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/who_to_greet_field_label"
+            android:hint="@string/who_to_greet_field_hint"
             app:counterEnabled="true"
             app:counterMaxLength="50"
             app:endIconMode="clear_text"
@@ -72,7 +72,7 @@
                 android:id="@+id/animals_radio_button_option_hand"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/hand_button_text"
+                android:text="@string/hand_radio_button_text"
                 android:textSize="32sp"
                 tools:ignore="TextContrastCheck" />
 
@@ -80,7 +80,7 @@
                 android:id="@+id/animals_radio_button_option_kitten"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/kitten_button_text"
+                android:text="@string/kitten_radio_button_text"
                 android:textSize="32sp"
                 tools:ignore="TextContrastCheck" />
 
@@ -88,7 +88,7 @@
                 android:id="@+id/animals_radio_button_option_octopus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/octopus_button_text"
+                android:text="@string/octopus_radio_button_text"
                 android:textSize="32sp"
                 tools:ignore="TextContrastCheck" />
 
@@ -96,7 +96,7 @@
                 android:id="@+id/animals_radio_button_option_elephant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/elephant_button_text"
+                android:text="@string/elephant_radio_button_text"
                 android:textSize="32sp"
                 tools:ignore="TextContrastCheck" />
         </RadioGroup>
@@ -106,7 +106,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="@string/wave_question"
+            android:text="@string/wave_switch_text"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/animals_radio_button_group"
             tools:ignore="TextContrastCheck" />

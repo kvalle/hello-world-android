@@ -6,10 +6,9 @@
     android:layout_height="match_parent">
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:paddingHorizontal="16dp"
         tools:context=".MainActivity">
 
@@ -20,8 +19,8 @@
             android:adjustViewBounds="true"
             android:alpha="0.6"
             android:importantForAccessibility="no"
-            android:scaleType="centerInside"
             android:paddingTop="32dp"
+            android:scaleType="centerInside"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

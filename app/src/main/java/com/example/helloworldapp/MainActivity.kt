@@ -1,7 +1,11 @@
 package com.example.helloworldapp
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
+import android.view.KeyEvent
+import android.view.View
+import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
 import com.example.helloworldapp.databinding.ActivityMainBinding
@@ -50,6 +54,13 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        binding.whoToGreetField.setOnKeyListener { view, keyCode, _ ->
+            handleKeyEvent(
+                view,
+                keyCode
+            )
+        }
+
         binding.helloButton.setOnClickListener {
 
             Snackbar
@@ -76,4 +87,14 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    private fun handleKeyEvent(view: View, keyCode: Int): Boolean {
+        if (keyCode == KeyEvent.KEYCODE_ENTER) {
+            // Hide the keyboard on enter
+            val inputMethodManager =
+                getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
+            return true
+        }
+        return false
+    }
 }
